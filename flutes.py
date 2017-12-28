@@ -4,6 +4,7 @@ bot = botobject.bot
 
 @bot.command(pass_context=True)
 async def SetFP(ctx, status):
+    """Used to set the various flute player channels. Only accessible to Game Masters.\n\nThe <status> argument can be either 'victim' or 'master' (without the quotes)"""
     roles = []
     for role in ctx.message.author.roles:
         roles.append(role.name)
@@ -28,6 +29,7 @@ async def SetFP(ctx, status):
 
 @bot.command(pass_context=True)
 async def w(ctx, *, message):
+    """Whisper to your flute victims >:)\n\nNote: Only avaliable in the Flute Master channel."""
     print("Test C Passed")
     with open ("data/victim.channel", "r") as victim_file:
         VictimID=victim_file.readlines()
@@ -68,7 +70,7 @@ async def on_message(message):
 
     if str(message.channel.id) == str(VictimID):
         if message.author != bot.user:
-            await bot.send_message(MasterChannel, "One of your victims said something! - " + message.author.mention + " said '" + message.content + "'!")
+            await bot.send_message(MasterChannel, "One of your victims said something! - " + message.author.mention + " said \n'`" + message.content + "`'!")
     else:
        python = "dum"
 
