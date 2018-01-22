@@ -11,7 +11,6 @@
   - Don't have a token? [Get one here.](https://discordapp.com/developers/applications/me)
 - run `start.bat` if using a windows-based system, or run `main.py` from the terminal if using linux.
 - set the Flute Master and Flute Victim channels with the `$SetFP <master/victim>` command in whichever channels you wish.
-- ???
-- profit
 
-# Made By Ben Industries
+## Attribution
+This code has been developed by [Ben Griffiths](https://github.com/BenTechy66)
